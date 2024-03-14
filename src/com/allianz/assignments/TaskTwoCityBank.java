@@ -16,6 +16,10 @@ public class TaskTwoCityBank {
 		
 		driver.findElement(By.linkText("select your product type")).click() ;
 		driver.findElement(By.linkText("Credit Card")).click() ;
+		
+		driver.findElement(By.id("citiCard1")).sendKeys("4545");
+		driver.findElement(By.id("citiCard2")).sendKeys("5656");
+
 
 	}
 
