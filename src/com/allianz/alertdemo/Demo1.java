@@ -18,16 +18,16 @@ public class Demo1 {
 		
 		driver.get("https://netbanking.hdfcbank.com/netbanking/IpinResetUsingOTP.htm");
 		
-		WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(20));
-		
-		wait.until(ExpectedConditions.alertIsPresent());
-			
 		driver.findElement(By.xpath("//img[@alt='Go']")).click();
 		
+		WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.alertIsPresent());
+			
+			
 		String actualAlertText=driver.switchTo().alert().getText();
 		System.out.println(actualAlertText);
 		
-		driver.switchTo().alert().accept(); // Click on Ok
+		//driver.switchTo().alert().accept(); // Click on Ok
 	}
 
 }
